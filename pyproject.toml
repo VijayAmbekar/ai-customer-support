@@ -7,7 +7,11 @@ authors = [
     { name = "VijayAmbekar", email = "vjambekar89@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "fastapi>=0.163.1",
+    "pydantic>=2.14.3",
+    "uvicorn[standard]>=0.54.0",
+]
 
 [project.scripts]
 ai-customer-support = "ai_customer_support:main"
