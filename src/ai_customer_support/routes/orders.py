@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from mock_data.mock_shopify import (
+from ai_customer_support.mock_data.mock_shopify import (
     get_faq,
     get_order,
     get_order_status,

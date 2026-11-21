@@ -1,20 +1,23 @@
 [project]
 name = "ai-customer-support"
 version = "0.1.0"
-description = "Add your description here"
+description = "AI Customer Support Automation (FastAPI + OpenAI)"
 readme = "README.md"
 authors = [
     { name = "VijayAmbekar", email = "vjambekar89@gmail.com" }
 ]
 requires-python = ">=3.13"
 dependencies = [
-    "fastapi>=0.163.1",
-    "pydantic>=2.14.3",
-    "uvicorn[standard]>=0.54.0",
+    "fastapi>=0.115.0",
+    "pydantic>=2.7.0",
+    "uvicorn[standard]>=0.30.0",
+    "openai>=1.30.0",
+    "requests>=2.32.0",
+    "loadenv>=0.1.1",
 ]
 
 [project.scripts]
-ai-customer-support = "ai_customer_support:main"
+ai-customer-support = "ai_customer_support.__main__:main"
 
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]
