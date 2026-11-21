@@ -4,6 +4,8 @@ import logging
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+from src.routes import orders
+
 # Set up logging configuration
 logging.basicConfig(
     level=logging.INFO,
@@ -13,6 +15,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 app = FastAPI()
+app.include_router(orders.router)
 
 
 class ChatMessage(BaseModel):
